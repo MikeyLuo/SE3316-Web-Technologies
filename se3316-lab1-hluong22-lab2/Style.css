@@ -1,0 +1,127 @@
+body {
+	background-color: Tomato;
+}
+
+h1{
+	color: White; 
+	text-align:center;
+	font-size:35px;
+}
+
+h2{
+	font-size:20px;
+	text-align:center;
+	color:salmon
+}
+
+h3{
+	text-align:center;
+	font-size:20px;
+}
+
+.pokedex{
+	height:250px;
+	width:250px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.SearchingName{
+	position:absolute; 
+	right:280px; 
+	top:206px;
+	padding: 5px 7px 5px 7px;
+	border-style: solid;
+	border-width: 10px;
+	background-color:powderblue;
+}
+
+.SearchingNumber{
+	position:absolute; 
+	right:550px; 
+	top:206px;
+	padding: 5px 7px 5px 7px;
+	border-style: solid;
+	border-width: 10px;
+	background-color:red;
+}
+
+/* ------------------------------------------*/
+
+div#container ul{
+	color:aqua;
+	top:300px;
+	margin-left:-50px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap:wrap;
+	align-items: flex-start;
+	justify-content:center;
+}
+
+div#container ul li{
+	margin:20px;
+	padding: 40px 80px 40px 80px;
+	border-style: solid;
+	border-width: 10px;
+	background-color:black;
+}
+
+div#container ul img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	height:120px;
+	width:120px;
+}
+
+div#container div{
+	text-align:center;
+	color:gold;
+	font-size: 35px;
+} 
+
+div#container ul li header{
+	color:white;
+	text-align: center;
+}
+
+/* ------------------------------------------- */
+
+div#pokedex ul{ 
+	top:300px;
+	margin-left:-50px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap:wrap;
+	align-items: flex-start;
+	justify-content:center;
+}
+	
+div#pokedex ul li{ 
+	margin:20px;
+	padding: 20px 100px 20px 100px;
+	border-style: solid;
+	border-width: 10px;
+	background-color:aqua;	
+}	
+div#pokedex ul img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	height:120px;
+	width:120px;
+}
+
+body p{
+	color:white;
+}
+
+div#container{
+	display:block;
+}
+
+
+
+

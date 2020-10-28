@@ -22,6 +22,14 @@ app.get('/api/parts', (req, res) =>
     res.send(parts);
 });
 
+// Get details for a given part
+app.get('/api/parts/:part_id', (req,res) =>
+{
+    const id = req.params.part_id;
+    console.log(`GET request for ${req.url}`);
+    res.send("Working on it ...");
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });

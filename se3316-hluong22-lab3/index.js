@@ -2,11 +2,20 @@ const express = require('express'); // Importing the express library
 const app = express();
 const port = 3000;
 
-// Creates basic route 
-// When a get request ask for the prefix '/' then execute function 
-app.get('/', (req, res) => 
+// Parts store
+const parts = [
+    {id:100,name:'Belt',colour:'brown'},
+    {id:101,name:'Clip',color:'brown'},
+    {id:102,name:'Belt',colour:'red'},
+    {id:103,name:'Hat',colour:'Purple'}
+]
+
+// get list of parts
+app.get('/api/parts', (req, res) => 
 {
-    res.send('Hello world');
+    // logs the message in the format get request and url
+    console.log(`GET request for ${req.url}`);
+    res.send(parts);
 });
 
 app.listen(port, () => {

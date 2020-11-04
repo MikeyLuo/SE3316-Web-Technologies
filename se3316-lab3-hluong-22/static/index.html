@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Parts Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Western Undergraduate Fall/Winter Timetable 2020/2021</h1>
+    <div id="search"><h2>Search</h2>
+    </div>
+    <div id="subjectcode"></div>
+    <div class= "schedName">
+        <h3>Schedule Name:</h3>
+        <input type="text" id="schednameText" placeholder="eg. semester 1">
+    </div>
+    <div class= "subjectSearch">
+        <h3>Subject Code:</h3>
+        <input type="text" id="subjecttext" placeholder="eg. ACTURSCI">
+    </div> 
+    <div class= "courseSearch">
+        <h3>Course Code:</h3>
+        <input type="text" id="coursetext" placeholder="eg. 1021B">
+    </div> 
+    <div class= "componentSearch">
+        <h3>Class component:</h3>
+        <input type="text" id="comptext" placeholder="eg. LEC">
+    </div>
+    <div class="searchButtons">
+        <button id="searchAll">Search all existing classes</button>
+        <button id="searchAllsched">Search all existing schedules</button>
+        <button id="searchSubject">Search for class via subject Code</button>
+        <button id="searchTimetable">Search via timetable entry</button>
+        <button id="searchCourseInSched">Search courses in a schedule</button>
+        <button id="addCourses">Add courses to existing schedule</button>
+        <button id="create">Create a schedule</button>
+        <button id="deleteSched">Delete an existing schedule</button>
+        <button id="deleteAll">Delete all schedules</button>
+    </div>
+    <div id = "result">
+
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>

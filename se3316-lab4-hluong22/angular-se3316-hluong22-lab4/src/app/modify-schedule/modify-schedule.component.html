@@ -1,0 +1,63 @@
+<h1>
+    Modify or Seach Schedules
+</h1>
+<div class="schedinfo">
+    <div id="schedname">
+        <h2>Schedule Name</h2>
+        <input [(ngModel)]="schedName" type="text" id = "schedText" placeholder="eg. semesterOne">
+    </div>
+    <p>
+        <button (click)="searchCou()" id="search">Search all existing schedules</button>
+        <button (click)="createSched()" id="create">Create Schedule</button>
+        <button (click)="addCou()" id="add">Add Course to Schedule</button>
+        <button (click)="showCou()" id="showCourse">Show all courses in a schedule</button>
+    </p>
+</div>
+
+<div *ngIf="displayInfo==1">
+    <div class="allClass">
+        <ul class ="rlist">
+            <li *ngFor="let item1 of allSched">
+                <p>
+                    Schedule Name: <span>{{item1.schedName}}</span>
+                </p>
+                <p>
+                    Number of courses: <span>{{item1.number_of_courses}}</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="addedcou">
+    <h3>
+        Successfully added courses to the schedule!
+    </h3>
+</div>
+
+<div *ngIf="cresched">
+    <h3>
+        Successfully created the schedule {{$schedName}}!
+    </h3>
+</div>
+
+<div *ngIf="displayInfo==3">
+    <div class="allCou">
+        <ul class ="rlist">
+            <li *ngFor="let item4 of allCou">
+                <p>
+                    Subject Code: <span>{{item4.subject_code}}</span>
+                </p>
+                <p>
+                    Course Code: <span>{{item4.course_code}}</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="displayInfo==10">
+    <h3>
+        Error - What you have entered is not valid!
+    </h3>
+</div>

@@ -1,0 +1,100 @@
+<h1>
+    Search for Class
+</h1>
+<h2>Subject Code</h2>
+<input [(ngModel)] = "subject" type="text" placeholder="eg. ENGSCI" >
+<h2>Course Code</h2>
+<input [(ngModel)] = "cou" type="text" placeholder="eg. 1021B">
+<h2>Optional Component</h2>
+<input [(ngModel)] = "opti" type="text" placeholder="eg. LEC">
+<p>
+    <button (click)="searchcode()" id="search">Search</button>
+    <button (click)="searchAll()" id="search">Search All Existing Classes</button>
+    <button (click)="showTimeT()" id="showtt">Show Timetables</button>
+</p>
+
+<div *ngIf="displayInfo==10">
+    <h3>
+        ERROR - What you have entered is not valid!
+    </h3>
+</div>
+
+<div *ngIf="displayInfo==1">
+    <div class="allClass">
+        <h3>
+        All Available Classes
+        </h3>
+        <ul class ="rlist">
+            <li *ngFor="let item1 of allClass">
+                <span>{{item1.subject}}: {{item1.className}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="displayInfo==2">
+    <div class="couCode">
+        <h3>
+            Course Codes
+        </h3>
+        <ul class ="rlist">
+            <li *ngFor="let item2 of couCode">
+                <span>{{item2}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="displayInfo==3">
+    <div class="couInfo">
+        <h3>
+            === Timetable Entry === 
+        </h3>
+        <ul class ="rlist">
+            <li *ngFor="let item3 of classInfo">
+                <p>
+                    Subject Code: <span>{{item3.subject}}</span>
+                
+                    Course Code: <span>{{item3.catalog_nbr}}</span>
+                
+                    Class Section: <span>{{item3.class_sec}}</span>
+                
+                    Component: <span>{{item3.ssr_component}}</span>
+                
+                    Location: <span>{{item3.facility_ID}}</span>
+                
+                    Start time: <span>{{item3.start_time}}</span>
+                
+                    End Time: <span>{{item3.end_time}}</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="displayInfo==4">
+    <div class="couInfo">
+        <h3>
+            Timetable Entry
+        </h3>
+        <ul class ="rlist">
+            <li *ngFor="let item4 of classInfo2">
+                <p>
+                    Subject Code: <span>{{item4.subject}}</span>
+                
+                    Course Code: <span>{{item4.catalog_nbr}}</span>
+                
+                    Class Section: <span>{{item4.class_sec}}</span>
+                
+                    Component: <span>{{item4.ssr_component}}</span>
+                
+                    Location: <span>{{item4.facility_ID}}</span>
+                
+                    Start time: <span>{{item4.start_time}}</span>
+                
+                    End Time: <span>{{item4.end_time}}</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<h1>
+    Delete Schedules
+</h1>
+<div class="deleteSched">
+    <div id="delsched">
+        <h2>Schedule Name</h2>
+        <input [(ngModel)] = "schedName" type="text" placeholder="eg. semester1">
+    </div>
+    <p>
+    <button (click)="deleteSched()" id="del">Delete</button>
+    <button (click)="deleteAll()" id="delAll">Delete All</button>
+    </p>
+</div>
+
+<div *ngIf="displayInfo==10">
+    <h2>
+        Error - What you have entered is not valid!
+    </h2>
+</div>
+
+<div *ngIf="displayInfo==1">
+    <h2>
+        Sucessfully Deleted the schedule {{schedName}}!
+    </h2>
+</div>
+
+<div *ngIf="displayInfo==2">
+    <h2>
+        Sucessfully Deleted all schedules!
+    </h2>
+</div>
